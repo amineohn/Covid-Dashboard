@@ -370,7 +370,7 @@ const Home: NextPage = () => {
         </form>
         <div className="flex justify-center">
           <p className="bg-black px-2 py-2 rounded-lg">
-            {data?.[0].lib_dep} - {departement}
+            {data?.[0].lib_dep ? "" : "..."} - {departement}
           </p>
         </div>
 
@@ -379,7 +379,7 @@ const Home: NextPage = () => {
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
               <p className="text-white">date</p>
               <span className="p-1.5 rounded-full bg-black font-bold text-white">
-                {data?.[0].date}
+                {data?.[0].date ? data?.[0].date : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -387,7 +387,7 @@ const Home: NextPage = () => {
                 Nombre de patients actuellement hospitalisés pour COVID-19
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].hosp}
+                {data?.[0].hosp ? data?.[0].hosp : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -397,7 +397,7 @@ const Home: NextPage = () => {
                 de santé
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].rad}
+                {data?.[0].rad ? data?.[0].rad : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -405,7 +405,7 @@ const Home: NextPage = () => {
                 Nombre de patients actuellement décédés pour COVID-19
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].dchosp}
+                {data?.[0].dchosp ? data?.[0].dchosp : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -414,13 +414,13 @@ const Home: NextPage = () => {
                 24
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].incid_hosp}
+                {data?.[0].incid_hosp ? data?.[0].incid_hosp : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
               <p className="text-white">Décès à l’hôpital</p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].incid_dchosp}
+                {data?.[0].incid_dchosp ? data?.[0].incid_dchosp : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -429,7 +429,7 @@ const Home: NextPage = () => {
                 prélèvement)
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].pos}
+                {data?.[0].pos ? data?.[0].pos : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -438,7 +438,7 @@ const Home: NextPage = () => {
                 date de prélèvement)
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].pos_7j}
+                {data?.[0].pos_7j ? data?.[0].pos_7j : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -447,7 +447,7 @@ const Home: NextPage = () => {
                 prélèvement)
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].conf_j1}
+                {data?.[0].conf_j1 ? data?.[0].conf_j1 : "..."}
               </span>
             </div>
             <div className="bg-lime-600 px-5 py-5 rounded-lg shadow-md shadow-neutral-900 inline-flex space-x-1 mt-0.5 justify-between">
@@ -456,7 +456,7 @@ const Home: NextPage = () => {
                 prélèvement)
               </p>
               <span className="p-1.5 rounded-full bg-black h-9 font-bold text-white">
-                {data?.[0].conf}
+                {data?.[0].conf ? data?.[0].conf : "..."}
               </span>
             </div>
           </div>
