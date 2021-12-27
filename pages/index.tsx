@@ -357,7 +357,7 @@ const Home: NextPage = () => {
               type="text"
               placeholder="Entrez un département"
               value={departement}
-              className="bg-black dark:bg-white  px-2 py-2 placeholder:text-white text-white shadow-white dark:placeholder:text-black dark:text-black rounded-lg  shadow-md dark:shadow-neutral-900"
+              className="bg-black dark:bg-white px-2 py-2 placeholder:text-white text-white shadow-white dark:placeholder:text-black dark:text-black rounded-lg  shadow-md dark:shadow-neutral-900"
               onChange={(e) => setDepartement(e.target.value)}
             />
             <button
