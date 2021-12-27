@@ -8,12 +8,23 @@ const Home: NextPage = () => {
   const { data } = useSWR<Covid>("/api/covid", fetcher);
   const [departement, setDepartement] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setDepartement(data?.[0].lib_dep == e.target.value ? "" : e.target.value);
     console.log(data?.[0].lib_dep);
     if (departement == "") {
       setError("Aucun département n'a été sélectionné");
+      setInterval(() => {
+        setError("");
+      }, 3000);
+    }
+    if (departement != "") {
+      setError("");
+      setSuccess("Le département a été sélectionné");
+      setInterval(() => {
+        setSuccess("");
+      }, 3000);
     }
   };
   return (
@@ -23,6 +34,13 @@ const Home: NextPage = () => {
           <FadeIn className="flex justify-center items-center space-y-2">
             <div className="bg-red-500 text-white font-medium rounded-lg px-4 py-2">
               {error}
+            </div>
+          </FadeIn>
+        )}
+        {success && (
+          <FadeIn className="flex justify-center items-center space-y-2">
+            <div className="bg-green-500 text-white font-medium rounded-lg px-4 py-2">
+              {success}
             </div>
           </FadeIn>
         )}
