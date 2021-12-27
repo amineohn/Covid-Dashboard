@@ -4,10 +4,12 @@ export type Example = {
 export type Covid = [
   {
     date: string;
-    tx_pos: null;
-    tx_incid: null;
+    tx_pos: string;
+    tx_incid: number;
+    lib_dep: string;
+    lib_reg: string;
     TO: number;
-    R: null;
+    R: number;
     rea: number;
     hosp: number;
     rad: number;
@@ -18,11 +20,11 @@ export type Covid = [
     incid_dchosp: number;
     conf: number;
     conf_j1: number;
-    pos: null;
+    pos: number;
     esms_dc: number;
     dc_tot: number;
-    pos_7j: null;
-    cv_dose1: null;
+    pos_7j: number;
+    cv_dose1: number;
     esms_cas: number;
   }
 ];
