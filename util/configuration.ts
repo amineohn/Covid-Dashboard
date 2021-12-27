@@ -1,4 +1,4 @@
 export const configuration = {
-  title: "Next.js + TypeScript + Tailwind CSS",
-  description: "Template NextJS, Tailwind, TypeScript",
+  title: "Covid-19",
+  description: "Little tool to get informations about Covid-19 in France",
 };
