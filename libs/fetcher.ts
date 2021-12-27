@@ -1,3 +1,5 @@
+import { NextApiRequest } from "next";
+
 export default async function fetcher<JSON = any>(
   input: RequestInfo,
   init?: RequestInit
